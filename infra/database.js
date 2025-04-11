@@ -40,5 +40,5 @@ function getSSLValue() {
     };
   }
 
-  return process.env.NODE_ENV === 'development' ? true : false;
+  return process.env.NODE_ENV === 'development' ? false : true;
 }
