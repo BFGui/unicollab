@@ -15,6 +15,7 @@ export default async function migrations(request, response) {
 
   try {
     dbClient = await database.getNewClient();
+    
     const defaultMigrationsOptions = {
       dbClient: dbClient,
       databaseUrl: process.env.DATABASE_URL,
