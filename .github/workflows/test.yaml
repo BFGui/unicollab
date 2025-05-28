@@ -6,7 +6,7 @@ jobs:
   jest:
     name: Jest Ubuntu
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
 
@@ -15,7 +15,5 @@ jobs:
           node-version: "lts/hydrogen"
 
       - run: npm ci
- 
 
       - run: npm test
-
