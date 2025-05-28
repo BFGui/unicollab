@@ -8,10 +8,9 @@ async function query(queryObject) {
     return result;
   } catch (error) {
     console.error(error);
-
     throw error;
   } finally {
-    await client?.end();
+    await client.end();
   }
 }
 
@@ -29,12 +28,10 @@ async function getNewClient() {
   return client;
 }
 
-const database = {
+export default {
   query,
   getNewClient,
 };
-
-export default database;
 
 function getSSLValue() {
   if (process.env.POSTGRES_CA) {
@@ -43,5 +40,5 @@ function getSSLValue() {
     };
   }
 
-  return process.env.NODE_ENV === "production" ? false : true;
+  return process.env.NODE_ENV === 'production' ? true : false;
 }
