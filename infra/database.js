@@ -8,7 +8,6 @@ async function query(queryObject) {
     return result;
   } catch (error) {
     console.error(error);
-
     throw error;
   } finally {
     await client?.end();
@@ -43,5 +42,5 @@ function getSSLValue() {
     };
   }
 
-  return process.env.NODE_ENV === "production" ? false : true;
+  return process.env.NODE_ENV === "production" ? true : false;
 }
