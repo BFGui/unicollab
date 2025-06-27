@@ -16,9 +16,13 @@ export default function StatusPage() {
   );
 }
 
+/**
+ * Componente que busca e exibe a data/hora da última atualização do status da API.
+ * Utiliza SWR para polling.
+ */
 function UpdatedAt() {
   const { isLoading, data } = useSWR("/api/v1/status", fetchAPI, {
-    refreshInterval: 2000, // Refresh every 2 seconds
+    refreshInterval: 2000, // Atualiza a cada 2 segundos
   });
 
   let UpdatedAt = "Carregando...";
@@ -30,9 +34,13 @@ function UpdatedAt() {
   return <div>Ultima atualização: {UpdatedAt}</div>;
 }
 
+/**
+ * Componente que busca e exibe o status do banco de dados (versão, conexões).
+ * Utiliza SWR para polling.
+ */
 function DatabaseStatus() {
   const { isLoading, data } = useSWR("/api/v1/status", fetchAPI, {
-    refreshInterval: 2000, // Refresh every 2 seconds
+    refreshInterval: 2000, // Atualiza a cada 2 segundos
   });
 
   let databaseStatus = "Carregando...";

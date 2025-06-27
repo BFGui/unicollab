@@ -1,6 +1,17 @@
+// pages/api/v1/status/index.js
+// Este endpoint retorna o status atual da aplicação, incluindo informações
+// sobre o banco de dados como versão, número máximo de conexões e conexões abertas.
+
 import database from "infra/database.js";
 import { InternalServerError } from "infra/errors.js";
 
+/**
+ * Handler para o endpoint GET /api/v1/status.
+ * Retorna informações sobre o status do banco de dados e a data/hora da consulta.
+ *
+ * @param {object} request - O objeto de requisição do Next.js.
+ * @param {object} response - O objeto de resposta do Next.js.
+ */
 async function status(request, response) {
   try {
     const updatedAt = new Date().toISOString();
