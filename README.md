@@ -15,7 +15,7 @@ Projeto de colaboração com Next.js, PostgreSQL e Docker, focado em boas práti
 - [✨ Visão Geral](#-visão-geral)
 - [📋 Requisitos](#-requisitos)
 - [🚀 Configuração do Ambiente](#-configuração-do-ambiente)
-- [ основным Comandos Principais](#-comandos-principais)
+- [⚙️ Comandos Principais](#️-comandos-principais)
 - [🧪 Testes](#-testes)
 - [🏗️ Estrutura do Projeto](#️-estrutura-do-projeto)
 - [📡 API](#-api)
@@ -52,7 +52,7 @@ Este projeto utiliza Next.js para o frontend e backend (API), PostgreSQL como ba
 4.  **Acesse o aplicativo:**
     Após iniciar o servidor de desenvolvimento (`npm run dev`), acesse `http://localhost:3000`.
 
-##  основной Comandos Principais
+## ⚙️ Comandos Principais
 
 -   **Rodar em modo de desenvolvimento:**
     ```sh
