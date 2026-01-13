@@ -20,3 +20,10 @@ async function postHandler(request, response) {
 
   return response.status(200).json(migratedMigrations);
 }
+
+export default router.handler({
+  onError: (err, request, response) => {
+    console.error(err.stack);
+    response.status(err.statusCode || 500).end(err.message);
+  },
+});
