@@ -8,7 +8,7 @@ const defaultMigrationsOptions = {
   direction: "up",
   verbose: true,
   migrationsTable: "pgmigrations",
-}
+};
 
 async function listPendingMigrations() {
   let dbClient;
@@ -46,10 +46,9 @@ async function runPendingMigrations() {
   }
 }
 
-
 const migrator = {
   listPendingMigrations,
   runPendingMigrations,
-}
+};
 
 export default migrator;
